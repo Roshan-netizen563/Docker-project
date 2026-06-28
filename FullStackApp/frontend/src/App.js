@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     // Fetches data from the backend container
-    fetch('http://localhost:5000/api/message')
+    fetch('http://43.205.138.109:5000/api/message')
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(err => setMessage('Error connecting to backend'));

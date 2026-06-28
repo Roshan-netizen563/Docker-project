@@ -5,8 +5,11 @@ services:
     build: ./frontend
     ports:
       - "${FRONTEND_PORT}:3000"
+    stdin_open: true    # <-- ADD THIS LINE
+    tty: true           # <-- ADD THIS LINE
     depends_on:
       - backend
+
 
   backend:
     build: ./backend
